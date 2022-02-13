@@ -46,6 +46,12 @@ variable "source_uri" {
   default     = ""
 }
 
+variable "storage_account_id" {
+  description = "Azure storage account ID "
+  type        = string
+  default     = ""
+}
+
 variable "network_interface_ids" {  
   description = "Network Interafce Ids for AR Instance."
   type        = list(string)

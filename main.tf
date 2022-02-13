@@ -6,10 +6,10 @@ resource "azurerm_managed_disk" "ar_osdisk" {
 
   storage_account_type = "Standard_LRS"
 
-  create_option = "Import"
-  source_uri    = var.source_uri
-  storage_account_id = ""
-  disk_size_gb  = "2048"
+  create_option      = "Import"
+  source_uri         = var.source_uri
+  storage_account_id = var.storage_account_id
+  disk_size_gb       = "2048"
 }
 
 resource "azurerm_virtual_machine" "ar_instance" {
